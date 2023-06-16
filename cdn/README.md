@@ -8,6 +8,6 @@ The provided file includes implementation of base64url encode and decode functio
 ```php
 require_once 'signUrl.php';
 $base64url_key = 'wpLL7f4VB9RNe_WI0BBGmA=='; // head -c 16 /dev/urandom | base64 | tr +/ -_
-$signed_url = signUrl('https://example.com/foo', 'my-key', $base64url_key, time() + 1800);
+$signed_url = sign_url('https://example.com/foo', 'my-key', $base64url_key, time() + 1800);
 echo $signed_url;
 ```
